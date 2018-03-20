@@ -1,0 +1,48 @@
+@import '../variable.scss';
+@import '../mixins.scss';
+.#{$css-prefix}{
+  &btn{
+    @include button;
+    display:block;
+    height:0.9rem;
+    position:relative;
+    width:100%;
+    box-sizing:border-box;
+    background-color:#fff;
+    border-radius:$border-radius-base;
+    font-size: inherit;
+    cursor: default;
+    @include round-border;
+    &:active{
+      box-shadow:1px 0 100px rgba(0,0,0,0.15) inset;
+    }
+    &-primary{
+      background-color:$color-primary;
+      color:#fff;
+      &:before{
+        border-color:$color-primary;
+        display:none;
+      }
+    }
+    &-warning{
+      background-color:$color-warning;
+      color:#fff;
+      &:before{
+        border-color:$color-warning;
+        display:none;
+      }
+    }
+    &-dashed{
+      background-color:#fff;
+      color:$color-primary;
+      border:0;
+      &:active{
+        box-shadow:none;
+      }
+      &:before{
+        border-color:darken($color-primary,5%);
+      }
+    }
+    @include disabled;
+  }
+}

@@ -1,0 +1,24 @@
+// Prefix
+$css-prefix             : v-;
+$css-prefix-iconfont    : v-icon;
+
+// color
+$color-primary          : #3399ff;
+$color-error            : #ff5500;
+$color-sub              : #999;
+$color-warning          : #ff9900;
+$color-star             : #f5a623;
+
+$font-size-default      : 0.28rem;
+$font-size-small        : 0.15rem;
+
+$item-padding           : 0.3rem 0;
+
+// Border color
+$border-color-base      : rgb(229, 229, 229);  // outside
+$border-radius-base     : 6px;
+
+// Animation
+$animation-time         : .3s;
+$transition-time        : .2s;
+$ease-in-out            : ease-in-out;

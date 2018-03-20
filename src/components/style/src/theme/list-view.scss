@@ -1,0 +1,69 @@
+@import '../variable.scss';
+@import '../mixins.scss';
+.#{$css-prefix}{
+  &list-view{
+    @include scroll;
+    &-inner{
+      position: relative;
+      padding-top: 5px;
+      &.active .#{$css-prefix}list-view-refresh span:before{
+        content:attr(data-refresh);
+      }
+      &.active{
+        .#{$css-prefix}list-view-refresh{
+          color:$color-primary;
+          span:before{
+            content:attr(data-refresh);
+          }
+          .#{$css-prefix}iconfont{
+            transform: rotate(180deg);
+            position:relative;
+            top:-2px;
+          }
+        }
+      }
+      &.loading{
+        .#{$css-prefix}list-view-refresh{ 
+          span:before{
+            content:attr(data-loading);
+          }
+          .#{$css-prefix}iconfont:before{
+            display:none
+          }
+          .#{$css-prefix}list-view-spinner{
+            display: inline-block
+          }
+        }
+      }
+    }
+    &-refresh{
+      color:$color-sub;
+      line-height:46px;
+      margin-top:-46px;
+      text-align:center;
+      .#{$css-prefix}iconfont{
+        vertical-align: middle;
+        display: inline-block;
+        line-height: 100%;
+        font-size:18px;
+        &:before{
+          content:'\e6d5';
+        }
+      }
+      .#{$css-prefix}list-view-spinner{
+        display: none
+      }
+      span:before{
+        content:attr(data-pulldown)
+      }
+    }
+    &-loading{
+      text-align:center;
+      line-height:1rem;
+      color:$color-sub;
+    }
+    &-spinner{
+      margin-right:4px;
+    }
+  }
+}

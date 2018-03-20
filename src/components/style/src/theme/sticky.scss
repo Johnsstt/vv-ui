@@ -1,0 +1,19 @@
+@import '../variable.scss';
+@import '../mixins.scss';
+.#{$css-prefix}{
+  &sticky{
+    &-box{
+      z-index:100;
+      position: relative;
+    }
+    &-fixed{
+      .#{$css-prefix}{
+        &sticky-inner{
+          width: 100%;
+          position: fixed;
+          top: 0px;
+        }
+      }
+    }
+  }
+}
